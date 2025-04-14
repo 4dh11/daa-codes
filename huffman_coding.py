@@ -38,13 +38,13 @@ def huffman_decoding(encoded_text, huffman_codes):
             current_code = ""
     return decoded_text
 
-if __name__ == "_main_":
+if __name__ == "__main__":
     text = "this is an example of huffman encoding"
-    print(f"Original text: {text}\n")
+    print(f"Original text: {text}")
 
     encoded_text, huffman_codes = huffman_encoding(text)
     print(f"Encoded text: {encoded_text}\n")
-    print(f"Huffman codes: {huffman_codes}\n")
+    print(f"Huffman codes: {huffman_codes}")
 
     decoded_text = huffman_decoding(encoded_text, huffman_codes)
     print(f"Decoded text: {decoded_text}")
