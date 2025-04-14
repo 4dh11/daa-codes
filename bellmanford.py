@@ -1,3 +1,4 @@
+import math
 def bellman_ford(nodes, edges, source_index=0):
     # Initialize distances with infinity
     path_length = {v: float('inf') for v in nodes}
@@ -16,7 +17,7 @@ def bellman_ford(nodes, edges, source_index=0):
 
     # Check for negative-weight cycles
     for (u, v), weight in edges.items():
-        if path_length[u] + weight < path_length[v]:
+        if path_length[u] != math.inf and path_length[u] + weight < path_length[v]:
             raise ValueError("Graph contains a negative-weight cycle")
 
     return path_length, path
